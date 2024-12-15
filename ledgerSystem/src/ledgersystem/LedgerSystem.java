@@ -92,6 +92,19 @@ public class LedgerSystem {
                     System.out.println("Invalid option. Please try again.");
             }
         }
+    
+     public void applyLoan(double principal, double rate, int period) {
+            loan += principal + (principal * rate * period / 100);
+        }
+
+        public void repayLoan(double amount) {
+            if (loan >= amount) {
+                loan -= amount;
+                System.out.println("Loan repaid successfully.");
+            } else {
+                System.out.println("Amount exceeds outstanding loan.");
+            }
+        }
     }
     
     
